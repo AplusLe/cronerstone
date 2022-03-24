@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>rock-starter-dependencies</module>
+        <module>rock-starter-redis</module>
     </modules>
 
     <properties>
