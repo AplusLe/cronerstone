@@ -3,10 +3,13 @@ package com.mate.starter.redis.config;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mate.starter.redis.core.RedisService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -19,7 +22,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  */
 @Slf4j
 @Configuration
-public class redisConfig {
+public class RedisConfig {
 
     @Bean
     public RedisSerializer<String> redisKeySerializer() {
@@ -55,5 +58,12 @@ public class redisConfig {
         template.afterPropertiesSet();
         log.info("---------------------初始化-redisTemplate end----------------------");
         return template;
+    }
+
+    @Bean
+    @ConditionalOnBean(name = "redisTemplate")
+    public RedisService redisService() {
+        log.info("[RedisService]组装完毕");
+        return new RedisService();
     }
 }
