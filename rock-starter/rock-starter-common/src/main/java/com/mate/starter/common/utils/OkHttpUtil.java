@@ -105,6 +105,7 @@ public class OkHttpUtil {
     public static String doGet(String url) {
         return doGet(url, Maps.newHashMap());
     }
+
     public static String doGet(String url, Map<String, Object> paramMap) {
         return doGet(url, paramMap, Maps.newHashMap());
     }

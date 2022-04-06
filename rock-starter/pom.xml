@@ -15,6 +15,9 @@
         <module>rock-starter-dependencies</module>
         <module>rock-starter-redis</module>
         <module>rock-starter-common</module>
+        <module>rock-starter-datasource</module>
+        <module>rock-starter-mybatis</module>
+        <module>rock-starter-database</module>
     </modules>
 
     <properties>
