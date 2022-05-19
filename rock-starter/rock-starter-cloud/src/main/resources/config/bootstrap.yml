@@ -1,0 +1,89 @@
+#服务器配置
+server:
+  undertow:
+    # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+    io-threads: 4
+    # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+    worker-threads: 20
+    # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+    buffer-size: 1024
+    # 是否分配的直接内存
+    direct-buffers: true
+
+---
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 82.157.127.106:8848
+        namespace: mate-local
+        file-extension: yaml
+        shared-configs:
+          - db-config.yaml
+          - redis-config.yaml
+          - starter-mate.yaml
+          - starter-comm.yaml
+      discovery:
+        namespace: mate-local
+        server-addr: 82.157.127.106:8848
+  config:
+    activate:
+      on-profile: local
+---
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 82.157.127.106:8848
+        namespace: mate-dev
+        file-extension: yaml
+        shared-configs:
+          - db-config.yaml
+          - redis-config.yaml
+          - starter-mate.yaml
+          - starter-comm.yaml
+      discovery:
+        namespace: mate-dev
+        server-addr: 82.157.127.106:8848
+  config:
+    activate:
+      on-profile: dev
+
+---
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 82.157.127.106:8848
+        namespace: mate-fat
+        file-extension: yaml
+        shared-configs:
+          - db-config.yaml
+          - redis-config.yaml
+          - starter-mate.yaml
+          - starter-comm.yaml
+      discovery:
+        namespace: mate-fat
+        server-addr: 82.157.127.106:8848
+  config:
+    activate:
+      on-profile: fat
+---
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 82.157.127.106:8848
+        namespace: mate-uat
+        file-extension: yaml
+        shared-configs:
+          - db-config.yaml
+          - redis-config.yaml
+          - starter-mate.yaml
+          - starter-com.yaml
+      discovery:
+        namespace: mate-uat
+        server-addr: 82.157.127.106:8848
+  config:
+    activate:
+      on-profile: uat

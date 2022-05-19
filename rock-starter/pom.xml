@@ -18,6 +18,7 @@
         <module>rock-starter-datasource</module>
         <module>rock-starter-mybatis</module>
         <module>rock-starter-database</module>
+        <module>rock-starter-cloud</module>
     </modules>
 
     <properties>
