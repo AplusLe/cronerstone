@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 清空上文的DS 设置避免污染当前线程
  *
- * @author pangu
+ * @author Kevin
  * @date 2021-2-3
  */
 public class ClearTtlDsInterceptor implements HandlerInterceptor {

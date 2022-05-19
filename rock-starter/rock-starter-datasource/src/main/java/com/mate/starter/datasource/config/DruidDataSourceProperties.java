@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * 参考DruidDataSourceWrapper
  * </p>
  *
- * @author pangu
+ * @author Kevin
  * @date 2021-2-3
  */
 @Data

@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * 动态数据源切换配置
  *
- * @author pangu
+ * @author Kevin
  * @date 2021-3-4
  */
 @Configuration

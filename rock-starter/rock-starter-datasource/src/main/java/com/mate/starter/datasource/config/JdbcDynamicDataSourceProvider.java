@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * 从数据源里获取配置信息
  *
- * @author pangu
+ * @author Kevin
  * @date 2021-3-3
  */
 public class JdbcDynamicDataSourceProvider extends AbstractJdbcDataSourceProvider {
