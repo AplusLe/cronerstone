@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.mate.starter.database.config.MybatisPlusConfiguration,\
+  com.mate.starter.database.config.DruidConfiguration
+
