@@ -21,8 +21,6 @@ spring:
         shared-configs:
           - db-config.yaml
           - redis-config.yaml
-          - starter-mate.yaml
-          - starter-comm.yaml
       discovery:
         namespace: mate-local
         server-addr: 82.157.127.106:8848
@@ -40,8 +38,6 @@ spring:
         shared-configs:
           - db-config.yaml
           - redis-config.yaml
-          - starter-mate.yaml
-          - starter-comm.yaml
       discovery:
         namespace: mate-dev
         server-addr: 82.157.127.106:8848
@@ -60,8 +56,6 @@ spring:
         shared-configs:
           - db-config.yaml
           - redis-config.yaml
-          - starter-mate.yaml
-          - starter-comm.yaml
       discovery:
         namespace: mate-fat
         server-addr: 82.157.127.106:8848
@@ -79,8 +73,6 @@ spring:
         shared-configs:
           - db-config.yaml
           - redis-config.yaml
-          - starter-mate.yaml
-          - starter-com.yaml
       discovery:
         namespace: mate-uat
         server-addr: 82.157.127.106:8848

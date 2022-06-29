@@ -19,6 +19,7 @@
         <module>rock-starter-mybatis</module>
         <module>rock-starter-database</module>
         <module>rock-starter-cloud</module>
+        <module>rock-starter-web</module>
     </modules>
 
     <properties>
