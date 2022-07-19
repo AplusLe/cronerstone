@@ -8,7 +8,7 @@ import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 /**
  * 解决undertow警告Buffer pool was not set on WebSocketDeploymentInfo
  *
- * @author pangu
+ * @author kevin
  */
 public class UndertowServerFactoryCustomizer implements WebServerFactoryCustomizer<UndertowServletWebServerFactory> {
 

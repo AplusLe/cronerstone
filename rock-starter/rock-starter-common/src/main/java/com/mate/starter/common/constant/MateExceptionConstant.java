@@ -3,7 +3,7 @@ package com.mate.starter.common.constant;
 /**
  * 异常常量类
  *
- * @author pangu
+ * @author kevin
  */
 public interface MateExceptionConstant {
 

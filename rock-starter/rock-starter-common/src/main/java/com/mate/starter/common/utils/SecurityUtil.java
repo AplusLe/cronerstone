@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * token安全检测工具类
  *
- * @author pangu
+ * @author kevin
  */
 @Slf4j
 public class SecurityUtil {

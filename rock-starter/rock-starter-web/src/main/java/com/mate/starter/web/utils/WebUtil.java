@@ -27,7 +27,7 @@ import java.util.function.Predicate;
  * Miscellaneous utilities for web applications.
  * 工具类的扩展
  *
- * @author pangu
+ * @author kevin
  * @author L.cm
  */
 @Slf4j

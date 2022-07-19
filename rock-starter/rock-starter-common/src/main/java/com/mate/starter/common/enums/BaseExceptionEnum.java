@@ -3,7 +3,7 @@ package com.mate.starter.common.enums;
 /**
  * 通用异常枚举类
  *
- * @author pangu
+ * @author kevin
  */
 public interface BaseExceptionEnum {
 	/**

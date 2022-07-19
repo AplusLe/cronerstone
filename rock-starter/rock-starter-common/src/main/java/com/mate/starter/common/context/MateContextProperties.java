@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Headers配置信息
  *
- * @author pangu
+ * @author kevin
  */
 @Getter
 @Setter

@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 主要用于传递用户信息、租户信息、链路追踪信息等
  * </p>
  *
- * @author pangu
+ * @author kevin
  */
 public final class MateContextHolder {
 

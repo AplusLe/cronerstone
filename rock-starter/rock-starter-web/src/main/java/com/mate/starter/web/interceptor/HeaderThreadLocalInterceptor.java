@@ -29,7 +29,7 @@ import static com.mate.starter.web.utils.WebUtil.getHeader;
  * 该拦截器要优先于系统中其他的业务拦截器
  * <p>
  *
- * @author pangu
+ * @author kevin
  */
 @Slf4j
 public class HeaderThreadLocalInterceptor implements HandlerInterceptor {

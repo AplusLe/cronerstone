@@ -5,7 +5,7 @@ import com.mate.starter.common.enums.BaseExceptionEnum;
 /**
  * 通用异常类
  *
- * @author pangu
+ * @author kevin
  */
 public class MateException extends BaseException {
 

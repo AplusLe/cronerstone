@@ -5,7 +5,7 @@ import lombok.experimental.UtilityClass;
 /**
  * 基础常量
  *
- * @author pangu
+ * @author kevin
  */
 @UtilityClass
 public class MateConstant {

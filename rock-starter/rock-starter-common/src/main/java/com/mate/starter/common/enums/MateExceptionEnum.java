@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 /**
  * 通用异常枚举类
  *
- * @author pangu
+ * @author kevin
  */
 @AllArgsConstructor
 @ExceptionEnum(module = MateExceptionConstant.MATE_COMMON_MODULE, kind = MateExceptionConstant.MATE_COMMON_ENUM)

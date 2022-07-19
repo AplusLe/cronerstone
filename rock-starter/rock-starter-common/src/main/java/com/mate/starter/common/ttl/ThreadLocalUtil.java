@@ -18,11 +18,10 @@ import java.util.function.Supplier;
  * * </code>
  *
  * @param <T> 对象
- * @author pangu
- * @author zhouhao
+ * @author kevin
  */
 @UtilityClass
-@SuppressWarnings("unchecked")
+
 public class ThreadLocalUtil<T> {
 
 	private final ThreadLocal<Map<String, Object>> THREAD_LOCAL = ThreadLocal.withInitial(HashMap::new);
@@ -41,10 +40,12 @@ public class ThreadLocalUtil<T> {
 		return new HashMap<>(THREAD_LOCAL.get());
 	}
 
+	@SuppressWarnings("unchecked")
 	public <T> T get(String key) {
 		return (T) THREAD_LOCAL.get().get(key);
 	}
 
+	@SuppressWarnings("unchecked")
 	public <T> T get(String key, T defaultValue) {
 		Map<String, Object> map = THREAD_LOCAL.get();
 		return map.get(key) == null ? defaultValue : (T) map.get(key);
@@ -94,7 +95,7 @@ public class ThreadLocalUtil<T> {
 		if (prefix == null) {
 			return vars;
 		}
-		Map<String, T> map = (Map<String, T>) THREAD_LOCAL.get();
+		@SuppressWarnings("unchecked") Map<String, T> map = (Map<String, T>) THREAD_LOCAL.get();
 		Set<Map.Entry<String, T>> set = map.entrySet();
 		for (Map.Entry<String, T> entry : set) {
 			String key = entry.getKey();
@@ -113,6 +114,7 @@ public class ThreadLocalUtil<T> {
 	 * @param key 键
 	 * @see Map#remove(Object)
 	 */
+	@SuppressWarnings("unchecked")
 	public <T> T remove(String key) {
 		return (T) THREAD_LOCAL.get().remove(key);
 	}
@@ -149,8 +151,9 @@ public class ThreadLocalUtil<T> {
 	 * @see Supplier
 	 */
 	@Nullable
+	@SuppressWarnings("unchecked")
 	public <T> T getIfAbsent(String key, Supplier<T> supplierOnNull) {
-		return ((T) THREAD_LOCAL.get().computeIfAbsent(key, k -> supplierOnNull.get()));
+		return  ((T) THREAD_LOCAL.get().computeIfAbsent(key, k -> supplierOnNull.get()));
 	}
 
 	/**

@@ -3,7 +3,7 @@ package com.mate.starter.common.api;
 /**
  * 返回码接口
  *
- * @author pangu
+ * @author kevin
  */
 public interface IResultCode {
 

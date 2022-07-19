@@ -8,7 +8,7 @@ import java.util.Base64;
 /**
  * Token工具类
  *
- * @author pangu
+ * @author kevin
  */
 public class TokenUtil {
 
